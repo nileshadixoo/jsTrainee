@@ -9,10 +9,60 @@
     <h1 class="heading" id="firstHeading">Learning DOM</h1>
     <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima numquam voluptatibus quisquam id reprehenderit voluptatum quasi vitae asperiores sapiente culpa.
     </p>
+    <div id="elem" class="content">
+        <ul>
+            <li>The</li>
+            <li>fox</li>
+            <li>is</li>
+            <li>eating</li>
+        </ul>
+        <ul>
+            <li>the</li>
+            <li>Man</li>
+            <li>is</li>
+            <li>walking</li>
+        </ul>
+    </div>
+    <div class="">
+        <h1>Book Content</h1>
+        <div class="content">
+            <input type="text" placeholder="search">
+            <ul class="book">
+                <li class="chapters">chapter1</li>
+                <li class="chapters">chapter2</li>
+                <li class="chapters">chapter3</li>
+                <li class="chapters">chapter4</li>
+            </ul>
+        </div>
+    </div>
+    <a href="http://example.com/file.zip">1st link</a>
+    <a href="http://ya.ru">2nd link</a>
 
     <script>
-       let heading =  document.getElementById('firstHeading')
-       heading.innerHTML= '<h1>Practing DOM</h1>'
+    let heading = document.getElementById('firstHeading')
+    // stying throught js
+    heading.style.background='green'
+    heading.style.padding = '15px'
+    heading.style.borderRadius = '30px'
+    let elements = document.querySelectorAll('ul>li:last-child')
+    for(elem of elements){
+        console.log(elem)
+       
+    }
+
+    let children = document.body.children
+    for(let child of children)
+    {
+        if(child.matches('a[href="zip"]')){
+           
+            console.log(child.href)
+        }
+    }
+    let chapters = document.querySelector('.chapters')
+    console.log(chapters.closest)
+
+
+
     </script>
 </body>
 </html>
